@@ -11,7 +11,10 @@ Usage: cerbero [-hv] --config <config> --keydir <keydir>
 VERSION="Cerbero v0.1.0"
 
 from docopt import docopt
+from config import config
 
 def main():
     arguments = docopt(__doc__, help=True, version=VERSION)
+    config_path = arguments['--config']
+    config.load_config(config_path)
     print("Hello world")
