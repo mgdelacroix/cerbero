@@ -1,5 +1,11 @@
 import yaml
 import os
+from utils import merge_dicts
+
+
+default_host = {
+    "port": 22
+}
 
 class Config():
     data = {}
@@ -21,6 +27,13 @@ class Config():
 
         self.keydir = keydir
         self.add_keys()
+
+
+    def get_hosts(self):
+        def validate_host(name, data):
+            return merge_dicts(default_host, data, {"name": name})
+
+        return [validate_host(k, v) for k, v in self.data.items()]
 
 
 config = Config()

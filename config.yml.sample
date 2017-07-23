@@ -1,7 +1,7 @@
 ---
 # Expects to find all the keys in the keydir
 web1:
-  hostname: root@web1.london1.sq
+  hostname: root@web1.myhost.com
   port: 22  # default if not specified
   keys:
     mgdelacroix:  # in the keydir there will be a mgdelacroix.pub
@@ -11,3 +11,11 @@ web1:
       expiration: true
       start: 2017-01-15
       end: 2017-06-15
+
+db:
+  hostname: root@db1.myhost.com
+  keys:
+    mgdelacroix:
+      expiration: false
+    arodier:
+      expiration: false
