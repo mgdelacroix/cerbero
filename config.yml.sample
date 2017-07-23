@@ -1,0 +1,13 @@
+---
+# Expects to find all the keys in the keydir
+web1:
+  hostname: root@web1.london1.sq
+  port: 22  # default if not specified
+  keys:
+    mgdelacroix:  # in the keydir there will be a mgdelacroix.pub
+      expiration: false
+      args: command=/usr/bin/ls  # default None
+    arodier:
+      expiration: true
+      start: 2017-01-15
+      end: 2017-06-15

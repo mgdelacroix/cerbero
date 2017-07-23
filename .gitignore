@@ -1,0 +1,4 @@
+*.pyc
+*.pyz
+dist/
+deps/
