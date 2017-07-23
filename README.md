@@ -2,12 +2,20 @@
 
 Cerbero is a simple program written in python to manage the SSH keys
 of your remote servers. It reads a config file written in YAML where
-the keys, remote machines and users and valid dates are specified and
-uses that information to log into the machines and regenerate the
+the keys, remote machines and valid dates are specified and uses that
+information to log into the machines and regenerate the
 `authorized_keys` file.
 
 It is intended to be run on its own and through a cron job every day,
 so it can delete the expired keys and add the new ones.
+
+## Roadmap
+
+- [ ] Push the ssh keys to the remote machines.
+- [ ] Merge the `authorized_keys` with a static file on the remote
+  machine if exists.
+- [ ] Apply start and end dates to allow keys to expire.
+- [ ] Web interface to modify the config file or maybe a small db.
 
 ## Development
 
