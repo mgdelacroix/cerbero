@@ -16,5 +16,6 @@ from config import config
 def main():
     arguments = docopt(__doc__, help=True, version=VERSION)
     config_path = arguments['--config']
-    config.load_config(config_path)
+    keydir = arguments['--keydir']
+    config.load(config_path, keydir)
     print("Hello world")
