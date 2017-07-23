@@ -7,7 +7,17 @@ uses that information to log into the machines and regenerate the
 `authorized_keys` file.
 
 It is intended to be run on its own and through a cron job every day,
-so it can delete expired keys and add the new ones.
+so it can delete the expired keys and add the new ones.
+
+## Development
+
+To run the program directly from the sources, you can use
+the [virtualenv](https://virtualenv.pypa.io/en/stable/) package or you
+can manage the dependencies manually.
+
+For this second approach, the script `run_dev` will install the
+dependencies locally in the `deps` directory of the repository and
+will run the `main` module including those dependencies.
 
 ## Build the binary
 
